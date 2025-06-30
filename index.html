@@ -6,10 +6,63 @@
   <title>Pàgina amb Fons de Vídeo</title>
   <link rel="stylesheet" href="hotels.css">
   <style>
-    h1{
-        letter-spacing: 3rem;
-        font-size: 5rem;
-        color: #8d8989;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* To prevent scrollbars if video slightly overflows */
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the entire screen */
+      z-index: -1; /* Place it behind other content */
+    }
+
+    .topnav {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      overflow: hidden;
+      position: fixed; /* Stick to the top */
+      top: 0;
+      width: 100%;
+      z-index: 1; /* Ensure it's above the video */
+      display: flex; /* Use flexbox for centering */
+      justify-content: center; /* Center links horizontally */
+    }
+
+    .topnav a {
+      /* float: left; remove float for flexbox */
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center the content */
+      text-align: center;
+      z-index: 1; /* Ensure it's above the video */
+    }
+
+    .content h1 {
+      letter-spacing: 3rem; /* Keep your original styling */
+      font-size: 5rem;     /* Keep your original styling */
+      color: #e0e0e0; /* Adjusted color for better visibility on video */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
     }
   </style>
 
@@ -21,7 +74,7 @@
     El teu navegador no suporta vídeo en HTML5.
   </video>
   <div class="topnav">
-    <a href="#">Bio</a>
+    <a href="bio.html">Bio</a>
     <a href="#">Treballs</a>
     <a href="#">Varis-Notes</a>
 </div>

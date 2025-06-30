@@ -185,3 +185,28 @@ footer {
     color: #333;
     margin: 0;
 }
+
+/* Styles for formacio.html */
+#formacio-cronologica h3 {
+    margin-top: 25px; /* Add more space above year headings */
+    margin-bottom: 10px;
+    font-size: 1.4em; /* Slightly larger font for year */
+    color: #333; /* Darker color for year heading */
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ccc; /* Lighter border for year */
+}
+
+#formacio-cronologica ul ul {
+    margin-left: 20px; /* Indent nested lists further */
+    margin-top: 5px;
+    list-style-type: disc; /* Use discs for second-level bullets */
+}
+
+#formacio-cronologica ul ul li {
+    padding-left: 10px; /* Adjust padding for nested list items */
+    font-size: 0.95em;
+}
+
+#eines-tecnologiques ul li strong {
+    color: #0056b3; /* Highlight the category of skills */
+}

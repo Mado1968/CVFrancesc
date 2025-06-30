@@ -138,3 +138,19 @@ footer {
         text-align: left; /* Switch to left align on very small screens if justify looks odd */
     }
 }
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+.button:hover {
+    filter: blur(2px); /* Apply blur effect on hover */
+}

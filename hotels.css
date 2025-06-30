@@ -154,3 +154,34 @@ footer {
 .button:hover {
     filter: blur(2px); /* Apply blur effect on hover */
 }
+
+/* Grid Container for Treballs */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px 0;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd; /* Light border for cards */
+    border-radius: 8px; /* Rounded corners for cards */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for cards */
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Rounded corners for images */
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+}

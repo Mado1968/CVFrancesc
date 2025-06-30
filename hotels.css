@@ -1,146 +1,140 @@
-
-
-  * {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Style the top navigation bar */
-  .topnav {
-    overflow: hidden;
-    background-color: #c2bfbf;
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-   
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  body, html {
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
+    background-color: #f8f9fa; /* Light grey background */
+    color: #333; /* Dark grey text for readability */
+}
 
-  
-  /* Style the content */
-  .content {
-    display: flex; /* Utilitza flexbox */
-    justify-content: center; /* Centra els elements horitzontalment */
-    align-items: center; 
-   
-    padding: 10px;
-    width: auto;
-    height: auto;
-    color: black;
-    position: relative;
-    z-index: 1;
+/* Container for the content */
+main {
+    max-width: 800px; /* Max width for content */
+    margin: 20px auto; /* Center content on the page */
+    padding: 20px;
+    background-color: #fff; /* White background for content area */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+}
+
+/* Header Styles */
+header {
+    background-color: #e9ecef; /* Lighter grey for header */
+    color: #495057; /* Slightly darker text for header */
+    padding: 20px 0;
     text-align: center;
-    font-family: Arial, sans-serif;
-   
-  }
-  
-  /* Style the footer */
-  .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-  }
-
- /* .input {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
- 
-  }*/
-  input[type="button"], 
-    input[type="submit"], 
-    input[type="reset"] {
-    background-color: #007bff; /* Color de fons blau */
-    color: white; /* Color del text blanc */
-    border: none; /* Sense borderes */
-    padding: 10px 20px; /* Espai intern */
-    font-size: 16px; /* Mida de la lletra */
-    cursor: pointer; /* Cursor de mà */
-    border-radius: 5px; /* Cantonades arrodonides */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombrejat */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transició suau */
-    }
-
-    input[type="button"]:hover, 
-    input[type="submit"]:hover, 
-    input[type="reset"]:hover {
-    background-color: #0056b3; /* Color de fons blau més fosc al passar el cursor */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombrejat més intens */
-    }
-
-    input[type="button"]:active, 
-    input[type="submit"]:active, 
-    input[type="reset"]:active {
-    background-color: #004494; /* Color de fons blau encara més fosc al fer clic */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombrejat més suau */
-    }
-
-  .llista{
-    background-color: aqua;
-    width: auto;
-    height: auto;
-    color: black;
-  }
-  .butons{
-
-    display: flex; /* Utilitza flexbox */
-    justify-content: center; /* Centra els elements horitzontalment */
-    align-items: center; /* Centra els elements verticalment si el contenidor té una alçada definida */
-    height: 50vh; /* Opcional: alçada completa de la vista per centrat verticalment */
-    gap: 7px; /* Espai entre els botons */
-  }
-  .dalt{
-    display: flex; /* Utilitza flexbox */
-    justify-content: center; /* Centra horitzontalment */
-    align-items: center; /* Centra verticalment */
-    height: 70vh; /* Ocupa tota l'alçada de la vista */
-    background-color: #f0f0f0; /* Color de fons suau */
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dee2e6; /* Subtle border */
 }
 
-.dalt img {
-    max-width: 100%; /* Amplada màxima del 100% del contenidor */
-    max-height: 100%; /* Alçada màxima del 100% del contenidor */
-    object-fit: contain; /* Mantenir la proporció de l'imatge */
-    border-radius: 10px; /* Cantonades arrodonides */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombrejat suau */
+header h1 {
+    margin: 0;
+    font-size: 2.2em; /* Larger font size for main title */
+    font-weight: 300; /* Lighter font weight for a modern look */
 }
 
+/* Section Styles */
+section {
+    margin-bottom: 30px; /* Space between sections */
+    padding-bottom: 20px; /* Padding at the bottom of sections */
+    border-bottom: 1px solid #eee; /* Separator line between sections */
+}
 
+section:last-of-type {
+    border-bottom: none; /* No border for the last section */
+    margin-bottom: 0;
+}
 
+section h2 {
+    font-size: 1.6em;
+    color: #007bff; /* Blue for section titles for a bit of color */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 400; /* Medium font weight */
+    border-bottom: 2px solid #007bff; /* Underline for section titles */
+    padding-bottom: 5px;
+    display: inline-block; /* To make the border only as wide as the text */
+}
 
+/* Paragraph Styles */
+p {
+    margin-bottom: 15px;
+    color: #555; /* Slightly lighter text for paragraphs */
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Unordered List Styles */
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove default padding */
+}
+
+ul li {
+    margin-bottom: 10px; /* Space between list items */
+    padding-left: 20px; /* Indent list items */
+    position: relative; /* For custom bullet points if needed */
+    color: #555;
+}
+
+/* Custom bullet point (optional, if you prefer over default or emojis) */
+/* ul li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+} */
+
+/* Specific styling for list items with checkmarks */
+#avantatges ul li {
+    padding-left: 0; /* Reset padding for these items as emojis are part of text */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #e9ecef; /* Same as header background */
+    color: #6c757d; /* Muted text color for footer */
+    font-size: 0.9em;
+    border-top: 1px solid #dee2e6; /* Subtle top border */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px; /* Adjust base font size for smaller screens */
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    section h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        text-align: left; /* Switch to left align on very small screens if justify looks odd */
+    }
+}

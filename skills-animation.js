@@ -1,24 +1,24 @@
 const skillsList = [
   // Llenguatges de Programació
-  "GO", "React (JavaScript)", "PHP", "Python", "SQL (MariaDB/MySQL)",
+  "GO", "React", "JavaScript", "PHP", "SQL (MariaDB/MySQL)",
   // Desenvolupament Web
-  "HTML", "CSS", "JavaScript", "LAMP stack", "WordPress (WooCommerce)", "PrestaShop", "phpMyAdmin",
+  "HTML", "CSS", "JavaScript", "LAMP stack", "PrestaShop", "phpMyAdmin",
   // Big Data
-  "Eines de Big Data (Sepe)", "Hadoop (Cloudera)", "R",
+  "Eines de Big Data ", "Hadoop (Cloudera)", "R",
   // Cloud Computing
-  "Microsoft Azure (AI Fundamentals)", "Microsoft 365 Fundamentals", "Google Drive", "OneDrive", "Dropbox", "iCloud",
+  "Microsoft Azure (AI Fundamentals)", "Microsoft 365 Fundamentals", "Google Drive", "OneDrive", "Dropbox",
   // Bases de Dades
   "MariaDB", "MySQL",
   // Metodologies Àgils
-  "Scrum", "Agile (Barcelona Activa)",
+  "Scrum", "Agile",
   // Intel·ligència Artificial
-  "Eines de IA (Taller de prompts)", "Reconeixement d'imatges", "Azure AI",
+  "Eines de IA (Taller de prompts)", "Reconeixement d'imatges", "Jules","Cursor",
   // Ciberseguretat
-  "Conceptes introductoris (SEPE)",
+  "Conceptes ISO 27001",
   // Blockchain
   "Aplicacions en Indústria 4.0",
   // Altres
-  "Test Driven Development (TDD)", "Eines de visualització de dades", "Realitat Augmentada", "Git (implícit per desenvolupament modern)"
+  "Test Driven Development (TDD)", "Eines de visualització de dades", "Realitat Augmentada", "Git"
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

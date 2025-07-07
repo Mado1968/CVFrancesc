@@ -2,11 +2,11 @@ const skillsList = [
   // Llenguatges de Programació
   "GO", "React", "JavaScript", "PHP", "SQL (MariaDB/MySQL)",
   // Desenvolupament Web
-  "HTML", "CSS", "JavaScript", "LAMP stack", "PrestaShop", "phpMyAdmin",
+  "HTML", "CSS", "JavaScript", "LAMP stack",  "phpMyAdmin",
   // Big Data
   "Eines de Big Data ", "Hadoop (Cloudera)", "R",
   // Cloud Computing
-  "Microsoft Azure (AI Fundamentals)", "Microsoft 365 Fundamentals", "Google Drive", "OneDrive", "Dropbox",
+  "Microsoft Azure", "Microsoft 365 Fundamentals", "Google Drive", "Dropbox",
   // Bases de Dades
   "MariaDB", "MySQL",
   // Metodologies Àgils
@@ -18,7 +18,7 @@ const skillsList = [
   // Blockchain
   "Aplicacions en Indústria 4.0",
   // Altres
-  "Test Driven Development (TDD)", "Eines de visualització de dades", "Realitat Augmentada", "Git"
+  "Test Driven Development (TDD)", " visualització de dades", "Realitat Augmentada", "Git"
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

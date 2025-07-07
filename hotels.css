@@ -292,7 +292,7 @@ body, html {
 .skill-item {
     position: absolute; /* Positioned by JavaScript */
     color: #ec121d; /* Deep Blue text color */
-    font-size: 20px; /* Adjust as needed */
+    font-size: 30px; /* Adjust as needed */
     font-weight: bold;
     padding: 5px 10px;
     background-color: rgba(173, 216, 230, 0.3); /* Light blue, slightly opaque background */

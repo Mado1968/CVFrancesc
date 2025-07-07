@@ -216,6 +216,11 @@ body, html {
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
+      /* overflow: hidden; */ /* Removed to allow scrolling on pages like bio.html */
+    }
+
+    /* Class to be added to body tag of pages that should not scroll (e.g., video background pages) */
+    .body-no-scroll {
       overflow: hidden; /* To prevent scrollbars if video slightly overflows */
     }
 

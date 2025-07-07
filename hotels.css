@@ -274,3 +274,30 @@ body, html {
       color: #e0e0e0; /* Adjusted color for better visibility on video */
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
     }
+
+/* Styles for the skills overlay on index.html */
+#skills-overlay {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Below .topnav and .content but above .video-background */
+    pointer-events: none; /* Allow clicks to pass through to elements below if any */
+    overflow: hidden; /* Prevent scrollbars if skills go out of bounds temporarily */
+}
+
+.skill-item {
+    position: absolute; /* Positioned by JavaScript */
+    color: #ffffff; /* White text, assuming video is generally dark */
+    font-size: 20px; /* Adjust as needed */
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.3); /* Slight dark background for readability */
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    opacity: 0; /* Start invisible for fade-in */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+    will-change: opacity; /* Hint for browser optimization */
+    white-space: nowrap; /* Prevent skills from wrapping lines */
+}

@@ -261,18 +261,20 @@ body, html {
 
     .content {
       position: absolute;
-      top: 50%;
+      top: 80px; /* Position below the topnav */
       left: 50%;
-      transform: translate(-50%, -50%); /* Center the content */
+      transform: translateX(-50%); /* Center horizontally */
+      width: 100%; /* Ensure it takes full width for text centering */
       text-align: center;
       z-index: 1; /* Ensure it's above the video */
     }
 
     .content h1 {
-      letter-spacing: 3rem; /* Keep your original styling */
-      font-size: 5rem;     /* Keep your original styling */
-      color: #e0e0e0; /* Adjusted color for better visibility on video */
+      letter-spacing: 0.5rem; /* Reduced letter spacing */
+      font-size: 2.5rem;     /* Reduced font size */
+      color: #091eda; /* Adjusted color for better visibility on video */
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+      white-space: nowrap; /* Ensure single line */
     }
 
 /* Styles for the skills overlay on index.html */
@@ -289,13 +291,13 @@ body, html {
 
 .skill-item {
     position: absolute; /* Positioned by JavaScript */
-    color: #ffffff; /* White text, assuming video is generally dark */
+    color: #ec121d; /* Deep Blue text color */
     font-size: 20px; /* Adjust as needed */
     font-weight: bold;
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.3); /* Slight dark background for readability */
+    background-color: rgba(173, 216, 230, 0.3); /* Light blue, slightly opaque background */
     border-radius: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Light text shadow for better contrast */
     opacity: 0; /* Start invisible for fade-in */
     transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
     will-change: opacity; /* Hint for browser optimization */

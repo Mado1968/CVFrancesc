@@ -6,7 +6,7 @@ const skillsList = [
   // Big Data
   "Eines de Big Data ", "Hadoop (Cloudera)", "R",
   // Cloud Computing
-  "Microsoft Azure", "Microsoft 365 Fundamentals", "Google Drive", "Dropbox",
+  "Microsoft Azure", "Microsoft 365 Fundamentals", "Google Drive", "Dropbox"," IoT",
   // Bases de Dades
   "MariaDB", "MySQL",
   // Metodologies Àgils

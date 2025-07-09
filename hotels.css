@@ -211,27 +211,34 @@ footer {
     color: #0056b3; /* Highlight the category of skills */
 }
 
+/* New background styles */
+.background-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  position: relative; /* Needed for the ::before pseudo-element's z-index to work correctly */
+  z-index: 0; /* Ensure this container can have a background stacking context */
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* Place the grid behind the content of .background-container */
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 20px 20px;
+  background-position: 0 0, 0 0, 0 0;
+}
+
 body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
       /* overflow: hidden; */ /* Removed to allow scrolling on pages like bio.html */
-    }
-
-    /* Class to be added to body tag of pages that should not scroll (e.g., video background pages) */
-    .body-no-scroll {
-      overflow: hidden; /* To prevent scrollbars if video slightly overflows */
-    }
-
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Cover the entire screen */
-      z-index: -1; /* Place it behind other content */
     }
 
     .topnav {
@@ -261,18 +268,20 @@ body, html {
 
     .content {
       position: absolute;
-      top: 50%;
+      top: 80px; /* Position below the topnav */
       left: 50%;
-      transform: translate(-50%, -50%); /* Center the content */
+      transform: translateX(-50%); /* Center horizontally */
+      width: 100%; /* Ensure it takes full width for text centering */
       text-align: center;
       z-index: 1; /* Ensure it's above the video */
     }
 
     .content h1 {
-      letter-spacing: 3rem; /* Keep your original styling */
-      font-size: 5rem;     /* Keep your original styling */
-      color: #e0e0e0; /* Adjusted color for better visibility on video */
+      letter-spacing: 0.5rem; /* Reduced letter spacing */
+      font-size: 2.5rem;     /* Reduced font size */
+      color: #091eda; /* Adjusted color for better visibility on video */
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+      white-space: nowrap; /* Ensure single line */
     }
 
 /* Styles for the skills overlay on index.html */
@@ -289,13 +298,13 @@ body, html {
 
 .skill-item {
     position: absolute; /* Positioned by JavaScript */
-    color: #ffffff; /* White text, assuming video is generally dark */
-    font-size: 20px; /* Adjust as needed */
+    color: #ec121d; /* Deep Blue text color */
+    font-size: 30px; /* Adjust as needed */
     font-weight: bold;
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.3); /* Slight dark background for readability */
+    background-color: rgba(173, 216, 230, 0.3); /* Light blue, slightly opaque background */
     border-radius: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Light text shadow for better contrast */
     opacity: 0; /* Start invisible for fade-in */
     transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
     will-change: opacity; /* Hint for browser optimization */

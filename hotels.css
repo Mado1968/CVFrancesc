@@ -211,27 +211,34 @@ footer {
     color: #0056b3; /* Highlight the category of skills */
 }
 
+/* New background styles */
+.background-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  position: relative; /* Needed for the ::before pseudo-element's z-index to work correctly */
+  z-index: 0; /* Ensure this container can have a background stacking context */
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* Place the grid behind the content of .background-container */
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 20px 20px;
+  background-position: 0 0, 0 0, 0 0;
+}
+
 body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
       /* overflow: hidden; */ /* Removed to allow scrolling on pages like bio.html */
-    }
-
-    /* Class to be added to body tag of pages that should not scroll (e.g., video background pages) */
-    .body-no-scroll {
-      overflow: hidden; /* To prevent scrollbars if video slightly overflows */
-    }
-
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Cover the entire screen */
-      z-index: -1; /* Place it behind other content */
     }
 
     .topnav {

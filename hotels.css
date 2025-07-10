@@ -255,11 +255,11 @@ body, html {
     .topnav a {
       /* float: left; remove float for flexbox */
       color: rgba(21, 7, 219, 0.945);
-       text-shadow:  0.5px 0.5px 0.2px rgba(240, 239, 243, 0.945);
+       text-shadow:  0.2px 0.2px 0.2px rgba(240, 239, 243, 0.945);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      font-size: 22px;
+      font-size: 26px;
     }
 
     .topnav a:hover {

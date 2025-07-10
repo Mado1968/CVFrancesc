@@ -18,7 +18,7 @@ const skillsList = [
   // Blockchain
   "Aplicacions en Indústria 4.0",
   // Altres
-  "Test Driven Development (TDD)", " visualització de dades", "Realitat Augmentada", "Git"
+  "TDD", " Data visualisation", "Augmented Reality", "Git","Jira",
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

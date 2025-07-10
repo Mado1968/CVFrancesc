@@ -310,3 +310,30 @@ body, html {
     will-change: opacity; /* Hint for browser optimization */
     white-space: nowrap; /* Prevent skills from wrapping lines */
 }
+
+/* Language switcher button styles */
+.language-button {
+    position: absolute;
+    top: 100px; /* Adjusted to be below the fixed topnav */
+    right: 20px;
+    padding: 8px 12px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    z-index: 1001; /* Ensure it's above other elements like topnav */
+    border: 1px solid #0056b3; /* Darker blue border */
+}
+
+.language-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #f0f0f0; /* Lighter text on hover */
+}
+
+/* Adjustments for headers that contain a language button to prevent overlap */
+header {
+    position: relative; /* Needed for absolute positioning of the language button within it */
+    padding-right: 120px; /* Add padding to the right of the header to make space for the button */
+                          /* Adjust this value as needed based on button size and text */
+}

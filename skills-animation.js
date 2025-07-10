@@ -4,7 +4,7 @@ const skillsList = [
   // Desenvolupament Web
   "HTML", "CSS", "JavaScript", "LAMP stack",  "phpMyAdmin",
   // Big Data
-  "Eines de Big Data ", "Hadoop (Cloudera)", "R",
+  "Eines de Big Data ", "Hadoop ", "R",
   // Cloud Computing
   "Microsoft Azure", "Microsoft 365 Fundamentals", "Google Drive", "Dropbox"," IoT",
   // Bases de Dades
@@ -12,7 +12,7 @@ const skillsList = [
   // Metodologies Àgils
   "Scrum", "Agile",
   // Intel·ligència Artificial
-  "Eines de IA (Taller de prompts)", "Reconeixement d'imatges", "Jules","Cursor",
+  " IA ", "MCP", "Vibecoding","Jules","Cursor",
   // Ciberseguretat
   "Conceptes ISO 27001",
   // Blockchain

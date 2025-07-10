@@ -269,7 +269,7 @@ body, html {
 
     .content {
       position: absolute;
-      top: 80px; /* Position below the topnav */
+      top: 220px; /* Position below the topnav */
       left: 50%;
       transform: translateX(-50%); /* Center horizontally */
       width: 100%; /* Ensure it takes full width for text centering */

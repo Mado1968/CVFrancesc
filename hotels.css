@@ -263,8 +263,8 @@ body, html {
     }
 
     .topnav a:hover {
-      background-color: #ddd;
-      color: black;
+      background-color: #252424;
+      color: rgb(59, 70, 233);
     }
 
     .content {

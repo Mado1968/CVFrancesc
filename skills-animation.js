@@ -40,13 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return skillsList[Math.floor(Math.random() * skillsList.length)];
     }
 
-    function getRandomPosition() {
-        // Ensure skills are not too close to the edges
-        const top = Math.random() * 80 + 10; // % from top (10% to 90%)
-        const left = Math.random() * 80 + 10; // % from left (10% to 90%)
-        return { top: `${top}%`, left: `${left}%` };
-    }
-
     function displaySkill() {
         if (currentSkillsOnScreen >= maxSkillsOnScreen) {
             // Schedule next attempt if max skills are already on screen
@@ -58,10 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const skillElement = document.createElement('span');
         skillElement.classList.add('skill-item');
         skillElement.textContent = skillText;
-
-        const position = getRandomPosition();
-        skillElement.style.top = position.top;
-        skillElement.style.left = position.left;
 
         skillsOverlay.appendChild(skillElement);
         currentSkillsOnScreen++;

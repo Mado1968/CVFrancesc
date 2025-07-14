@@ -287,18 +287,14 @@ body, html {
 
 /* Styles for the skills overlay on index.html */
 #skills-overlay {
-    position: fixed; /* Cover the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Below .topnav and .content but above .video-background */
-    pointer-events: none; /* Allow clicks to pass through to elements below if any */
-    overflow: hidden; /* Prevent scrollbars if skills go out of bounds temporarily */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
 }
 
 .skill-item {
-    position: absolute; /* Positioned by JavaScript */
     color: #ec121d; /* Deep Blue text color */
     font-size: 30px; /* Adjust as needed */
     font-weight: bold;

@@ -285,13 +285,33 @@ body, html {
       white-space: nowrap; /* Ensure single line */
     }
 
-/* Styles for the skills overlay on index.html */
+@keyframes moveSkills {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
 #skills-overlay {
+    position: fixed;
+    width: 100%;
+    bottom: 50px; /* Adjust as needed */
+    left: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px 0;
+    justify-content: flex-start; /* Align items to the start of the container */
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .skill-item {
@@ -302,8 +322,9 @@ body, html {
     background-color: rgba(7, 7, 7, 0.3); /* Light blue, slightly opaque background */
     border-radius: 5px;
     text-shadow: 1px 1px 2px rgba(21, 7, 219, 0.945); /* Light text shadow for better contrast */
-    opacity: 0; /* Start invisible for fade-in */
-    transition: opacity 0.3s ease-in-out; /* Smooth fade transition */
-    will-change: opacity; /* Hint for browser optimization */
     white-space: nowrap; /* Prevent skills from wrapping lines */
+    animation: moveSkills 15s linear infinite;
+    opacity: 0; /* Initially hidden */
+    display: inline-block;
+    margin-right: 20px; /* Space between skills */
 }

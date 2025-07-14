@@ -12,7 +12,7 @@ const skillsList = [
   // Metodologies Àgils
   "Scrum", "Agile",
   // Intel·ligència Artificial
-  " IA ", "MCP", "Vibecoding","Jules","Cursor",
+  " IA ", "MCP", "Vibecoding","Jules","Intention to Code",
   // Ciberseguretat
   "Conceptes ISO 27001",
   // Blockchain
@@ -28,60 +28,28 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const minDisplayTime = 3000; // Minimum time a skill is visible (ms)
-    const maxDisplayTime = 7000; // Maximum time a skill is visible (ms)
-    const minIntervalTime = 500;  // Minimum time between new skills appearing (ms)
-    const maxIntervalTime = 2000; // Maximum time between new skills appearing (ms)
-    const maxSkillsOnScreen = 8; // Maximum number of skills visible at once
-
-    let currentSkillsOnScreen = 0;
-
-    function getRandomSkill() {
-        return skillsList[Math.floor(Math.random() * skillsList.length)];
-    }
-
-    function displaySkill() {
-        if (currentSkillsOnScreen >= maxSkillsOnScreen) {
-            // Schedule next attempt if max skills are already on screen
-            scheduleNextSkill();
-            return;
-        }
-
-        const skillText = getRandomSkill();
-        const skillElement = document.createElement('span');
-        skillElement.classList.add('skill-item');
-        skillElement.textContent = skillText;
-
-        skillsOverlay.appendChild(skillElement);
-        currentSkillsOnScreen++;
-
-        // Force reflow to ensure transition is applied
-        void skillElement.offsetWidth; 
-
-        // Fade in
-        skillElement.style.opacity = 1;
-
-        const displayDuration = Math.random() * (maxDisplayTime - minDisplayTime) + minDisplayTime;
-
-        // Fade out and remove
-        setTimeout(() => {
-            skillElement.style.opacity = 0;
-            setTimeout(() => {
-                if (skillElement.parentNode === skillsOverlay) {
-                    skillsOverlay.removeChild(skillElement);
-                }
-                currentSkillsOnScreen--;
-            }, 500); // Corresponds to CSS transition time
-        }, displayDuration);
+    // Function to clone and append skills for a continuous loop
+    function setupSkillAnimation() {
+        skillsOverlay.innerHTML = ''; // Clear existing skills
         
-        scheduleNextSkill();
+        // Append original skills
+        skillsList.forEach(skillText => {
+            const skillElement = document.createElement('span');
+            skillElement.classList.add('skill-item');
+            skillElement.textContent = skillText;
+            skillsOverlay.appendChild(skillElement);
+        });
+
+        // Append a second set of skills to create the seamless loop
+        skillsList.forEach(skillText => {
+            const skillElement = document.createElement('span');
+            skillElement.classList.add('skill-item');
+            skillElement.textContent = skillText;
+            // Add a class to identify the cloned items for staggered animation
+            skillElement.classList.add('skill-item-clone'); 
+            skillsOverlay.appendChild(skillElement);
+        });
     }
 
-    function scheduleNextSkill() {
-        const interval = Math.random() * (maxIntervalTime - minIntervalTime) + minIntervalTime;
-        setTimeout(displaySkill, interval);
-    }
-
-    // Start the animation
-    scheduleNextSkill();
+    setupSkillAnimation();
 });

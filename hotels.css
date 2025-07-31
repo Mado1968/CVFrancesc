@@ -287,18 +287,12 @@ body, html {
 
 @keyframes moveSkills {
     0% {
-        transform: translateX(100vw);
-        opacity: 0;
-    }
-    10% {
         opacity: 1;
-    }
-    90% {
-        opacity: 1;
+        margin-left: 0;
     }
     100% {
-        transform: translateX(-100%);
         opacity: 0;
+        margin-left: 20px;
     }
 }
 
@@ -324,7 +318,7 @@ body, html {
     text-shadow: 1px 1px 2px rgba(21, 7, 219, 0.945); /* Light text shadow for better contrast */
     white-space: nowrap; /* Prevent skills from wrapping lines */
     animation: moveSkills 8s linear infinite;
-    opacity: 0; /* Initially hidden */
+    opacity: 1; /* Initially visible */
     display: inline-block;
     margin-right: 20px; /* Space between skills */
 }
